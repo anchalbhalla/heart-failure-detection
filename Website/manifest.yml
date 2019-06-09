@@ -1,0 +1,5 @@
+---
+applications:
+- name: titanic
+  memory: 256M
+  buildpack: python_buildpack

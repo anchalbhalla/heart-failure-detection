@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif; 
+background-color: black;}
+* {box-sizing: border-box;}
+
+
+
+input[type=text], select, textarea, option {
+  width: 200px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical; 
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer; 
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+} 
+
+form {
+    display: inline-block; 
+     padding-left: 100px;
+} 
+
+img{ 
+  padding-right: 30px;
+ } 
+
+ h1{ 
+    color: #ffff66;
+  } 
+
+  h4{ 
+    color: black;
+    align-content: left; 
+    font-style: italic;
+  } 
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 5px;
+  padding: 5px;
+   grid-column-gap: 30px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 10px 0;
+  font-size: 10px;
+   grid-column-gap: 30px;
+
+}
+
+.item1 {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-gap: 30px;
+
+}
+
+.item2 {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-gap: 30px;
+} 
+
+.header{ 
+  background-color: black
+ } 
+
+#samplaceholder{
+  color: green;
+}
+
+</style>
+</head>
+<body>
+
+<div class = "header">
+<h1> <center>Heart Failure Prediction Application</h1>  
+</div>
+<img src="{{url_for('static', filename='images/heart.png')}}" align="right" width=500px>
+<div class="container"> 
+  
+  <form id = "myForm" action= "http://localhost:8080/watson" method="POST">
+
+<h4>Enter the following details of the patient: </h4> 
+
+
+<div class="grid-container">
+
+   <input type="text" class="item1" id= "AVGHEARTBEATSPERMIN" name="AVGHEARTBEATSPERMIN" placeholder="AVGHEARTBEATSPERMIN" value = 93>
+   <input type="text" class="item1" name="PALPITATIONSPERDAY" id="PALPITATIONSPERDAY" placeholder="PALPITATIONSPERDAY" value = 22>
+
+ 
+
+
+</div>
+
+<div class="grid-container">
+
+  <!--  <input type="text" class="item1" id = "residence" name="residence" placeholder="Residence."> -->
+    <input type="text" class="item1" name="CHOLESTEROL" id="CHOLESTEROL" placeholder="CHOLESTEROL" value = 163>
+    <input type="text" class="item1" name="BMI" id="BMI" placeholder="BMI" value= 25>
+ 
+</div>
+
+
+
+<div class="grid-container">
+
+   <input type="text" class="item1" name="HEARTFAILURE" id="HEARTFAILURE" placeholder="HEARTFAILURE" value = 'NO'>
+    <input type="text" class="item1" name="AGE" id="AGE" placeholder="AGE" value = 30>
+
+</select>
+
+</div>
+
+
+
+<div class="grid-container">
+
+   <input type="text" class="item1" name="SEX" id ="SEX" placeholder="SEX" value = 'F'>
+     <input type="text" class="item1" name="FAMILYHISTORY" id="FAMILYHISTORY" placeholder="FAMILYHISTORY" value ='N'>
+
+ 
+
+
+</div>
+
+<div class="grid-container">
+
+   <input type="text" class="item1" name="SMOKERLAST5YRS" id="SMOKERLAST5YRS" placeholder="SMOKERLAST5YRS" value = 'N'>
+ 
+
+    <input type="text" class="item1" name="EXERCISEMINPERWEEK" id="EXERCISEMINPERWEEK" placeholder="EXERCISEMINPERWEEK" value = 110>
+
+ </select>
+ 
+
+
+</div>
+
+
+
+
+    
+   <!--  <label for="incomel"><center>Income</label><br>
+    <input type="text" id="income" name="income" placeholder="Income..."><br>
+
+    <label for="appliedl">Applied Online</label><br> 
+    <input type="text" id="applied" name="applied" placeholder="yes/no"> -->
+    <!-- <select id="sex" name="sex">
+      <option value="male">male</option>
+      <option value="female">female</option>
+    </select>
+ -->
+  <!--  <br><label for="residencel">Residence</label><br>
+    <input type="text" id="residence" name="residence" placeholder="Your residence">
+
+    <br><label for="addressl">Years at current address</label><br>
+    <input type="text" id="address" name="address" placeholder="1,2,3...">
+
+    <br><label for="employerl">Years at current employer</label><br>
+    <input type="text" id="employer" name="employer" placeholder="1,2,3...">
+
+    <br><label for="cardsl">Number of cards</label><br>
+    <input type="text" id="cards" name="cards" placeholder="1,2,3..."><br> 
+
+    <br><label for="debt1">Credit Card debt</label><br>
+    <input type="text" id="debt" name="debt" placeholder="$$$"> -->
+
+    <!-- <select id="cabin" name="cabin">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>  -->
+
+  <!--   <br><label for="loanl">Loan</label><br>
+     <input type="text" id="loans" name="loans" placeholder="1/0"> -->
+    <!-- <select id="pclass" name="pclass">
+      <option value="first">First Class</option>
+      <option value="second">Second Class</option> 
+      <option value="third">Third Class</option>
+    </select>  -->
+
+
+  <!--   <br><label for="amountl"> Loan Amount</label><br>  
+     <input type="text" id="amount" name="amount" placeholder="$$$"> 
+
+      <br><label for="pricel"> Sales Price</label><br>  
+     <input type="text" id="price" name="price" placeholder="$$$">
+
+      <br><label for="locationl"> Location</label><br>   --> 
+
+    
+
+   <!--  <select id="embark" name="embark">
+      <option value="cher">Cherbourg</option>
+      <option value="queen">Queenstown</option> 
+      <option value="south">Southampton</option>
+    </select> -->
+
+    <center><br><input type="submit" value="Submit">
+  </form>
+</div>  
+
+</body>
+</html>
