@@ -17,6 +17,7 @@ This is the SPSS flow that needs to be created in order to deploy the model
 7. Hit Run again 
 8. Click on the 3 dots on the table node 
 <img src = https://github.com/anchalbhalla/heart-failure-detection/blob/master/pic1.png > 
+
 9. Select Save node as a model and give a name to the model 
 10. Once model is deployed go to the project page and you will find the model under Watson machine learning models
 11. Click the model and click add deployment, next add a name for the deployment and wait for it to be deployed
