@@ -16,5 +16,6 @@ This is the SPSS flow that needs to be created in order to deploy the model
 3. Add the scoring URL of the model created on Watson Studio. This will be present in the deployments tab when you deploy the model. 
 <img src = "https://github.com/anchalbhalla/heart-failure-detection/blob/master/pics/url.png"
 
-### Working Demo of the application in action
+### Heart Rate Failure Detection Application in Action
+
 <img src = "https://github.com/anchalbhalla/heart-failure-detection/blob/master/gifs/app.gif">
